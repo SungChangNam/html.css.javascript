@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 테두리</title>
+    <style>
+        p{
+            background: yellow;
+            width: 200px;
+            height: 60px;
+            padding: 10px;
+            border: 20px solid lightgray;
+        }
+
+        #ro{border-image: url("img/border.png") 35 round;}
+        #re{border-image: url("img/border.png") 30 repeat;}
+        #st{border-image: url("img/border.png") 30 stretch;}
+
+        div{
+            width: 200ox;
+            height: 200px;
+            color: blueviolet;
+            font-size: 16px;
+            background-color: skyblue;
+            background-size: 100px 100px;
+            background-image:url("img/spongebob.png") ;
+            background-repeat: repeat-y;
+            background-position: center center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3>이미지 테두리</h3>
+    <hr>
+    원본 이미지<br>
+    
+    <img src="img/border.png" alt="원본">
+    <hr>
+    <p >20 x 20 크기의 회색테두리를 가진 p태그</p>
+    <p id="ro">round 스타일 이미지 테두리</p>
+    <p id="re">repeat 스타일이미지</p>
+    <p id="st">stretch 스타일 이미지</p>
+
+    <hr>
+    <h3>div 박스 배경</h3>
+    <br>
+    <div>
+        spongeBob is an over -optimistic spongeBob that annoys
+    </div>
+
+</body>
+</html>

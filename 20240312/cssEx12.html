@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 그림자</title>
+    <style>
+        div{
+            width: 150px;
+            height: 70px;
+            padding: 10px;
+            border: 10px solid lightgray;
+            background-image: url("img/spongebob.png");
+            background-size: 150px 100px;
+            background-repeat: no-repeat;
+            
+        }
+        .redBox{
+            box-shadow: 10px 10px red;
+        }
+        .blueBox{
+            box-shadow: 10px 10px 5px skyblue;
+        }
+        .multiBox{
+            box-shadow: 2px 2px 2px black
+            ,0 0 25px blue,
+            0 0 5px darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h3>박스 그림자</h3>
+    <hr>
+    <div class="redBox">뚱이와 함께</div><br>
+    <div class="blueBox">뚱이와 함께</div><br>
+    <div class="multiBox">뚱이와 함께</div><br>
+
+    <hr color="red">
+    <br>
+    <h3>마우스 커서</h3>
+    <br>
+    <p style="cursor: crosshair;">십자 모양 커서</p>
+    <p style="cursor: help;" >도움말 모양 커서</p>
+    <p style="cursor: pointer;">포인터 모양 커서</p>
+    <p style="cursor: progress;">프로그램 실행중  모양 커서</p>
+    <p style="cursor: n-resize;">상하 크기 조절 모양 커서</p>
+
+
+</body>
+</html>
