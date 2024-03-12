@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개서</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>/* 기본 설정 */
+        body {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+          color: #333;
+        }
+        
+        /* 컨테이너 */
+        .container {
+          width: 800px;
+          margin: 0 auto;
+          max-width: 95%;
+        }
+        
+        /* 프로필 */
+        .profile {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        
+        .profile img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin-bottom: 10px;
+        }
+        
+        .profile h1 {
+          margin: 0;
+          font-size: 24px;
+          color: #444;
+        }
+        
+        .profile p {
+          font-size: 16px;
+          margin-bottom: 10px;
+          color: #666;
+        }
+        
+        /* 본문 */
+        .contents {
+          margin-top: 20px;
+        }
+        
+        /* 그리드 */
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 20px;
+        }
+        
+        /* 아이템 */
+        .item {
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          background-color: #fff;
+        }
+        
+        .item h2 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #333;
+        }
+        
+        .item ul {
+          list-style: none;
+          padding: 0;
+        }
+        
+        .item ul li {
+          margin-bottom: 5px;
+          color: #777;
+        }
+        </style>
+  <div class="container">
+    <div class="profile">
+      <img src="profile.jpg" alt="프로필 사진">
+      <h1>[이름]</h1>
+      <p>[간단한 자기소개]</p>
+    </div>
+    <div class="contents">
+      <div class="grid">
+        <div class="item">
+          <h2>학력</h2>
+          <ul>
+            <li>[졸업년도] [학교명] [학과] 졸업</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h2>경력</h2>
+          <ul>
+            <li>[기간] [회사명] [직책]</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h2>기술 및 역량</h2>
+          <ul>
+            <li>[기술/역량 1]</li>
+            <li>[기술/역량 2]</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h2>프로젝트</h2>
+          <ul>
+            <li>[프로젝트 1] - [간략한 설명]</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h2>수상 및 활동</h2>
+          <ul>
+            <li>[수상 1] - [수상 내용]</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h2>관심분야</h2>
+          <ul>
+            <li>[관심분야 1]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
