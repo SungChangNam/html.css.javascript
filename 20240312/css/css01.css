@@ -1,0 +1,10 @@
+
+/* 여러줄이나 한줄일 경우*/
+/* 스타일 적용시
+    셀렉터 - > 태그,(#)ID, .(class)
+                #aa{}->id   .aa{}->class
+    셀렉터(선택자) {프로퍼티(속성) : 값(value); 프로퍼티(속성): 값} */
+body{background-color: mistyrose;}
+h3{color: purple;}
+hr{border: 5px solid  yellowgreen;}
+span{color: blue; font-size:20px;}
