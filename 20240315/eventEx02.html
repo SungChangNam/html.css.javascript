@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <SCript>
+        function insertQuestion(){
+            alert("what do u want to know?")
+            var q =prompt("수식을 입력하세요.","")
+            var ans =eval(q); // 질문에 대한 답
+            
+            var result =q +"=" +ans
+            document.getElementById("question").innerHTML =result
+            
+            
+        }
+
+        var today = new Date()
+        document.write(today);
+        
+    </SCript>
+</head>
+<!-- onload : 웹브라우저가 실행될떄 자동으로 함수를 호출하는 기능 -->
+
+<body onload="insertQuestion()">
+    <h1 id="question"></h1>
+    <h1 id="question"></h1>
+</body>
+</html>

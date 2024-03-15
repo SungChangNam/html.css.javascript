@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //두 수를 더하여 결과를 리턴해 주는 함수를 선언
+        function sum(x,y){
+            var z =x+y;
+            return z;
+        }
+        // input 태그를  클릭하면 호출한다.
+        function printResult(){
+        
+            var result=sum(10,50);
+            var myTag= document.getElementById("question")
+            var redResult = "<font color='red'>" +result + "</font>"
+            
+            /*
+            태그안에 result 값을 넣는다. -> innerHTML = result;
+            태그의 안에는 ? 가 들어있지만, 새롭게 지정된 결과값이?
+            지우고 그 자리를 차지한다.
+            */
+            myTag.innerHTML =redResult;
+        
+        } 
+        
+        function hiddenResult(){
+            var myTag= document.getElementById("question")
+            myTag.innerHTML ="?";
+        }
+    </script>
+</head>
+<body>
+    <h1 onmouseover="printResult()" onmouseout="hiddenResult()">10 +50 = <span id="question" >?</span></h1>
+    <!-- <input type="button" value="결과보기" onclick="printResult()">&nbsp;
+    <input type="button"  value="결과 숨기기" onclick="hiddenResult()"> -->
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수 정의
+        function f(x,y){
+            var z =x *y;
+
+
+            //계산 결과값이 10보다 작을 경우 실행을 중단하시오.
+            if(z <10 ){
+                document.write("10보다 작을경우 "+ z+"<br>");
+                return;//break;
+
+            }
+            document.write(x+"<br>");
+            return z;
+            
+
+        }
+        var a = f(2,4);
+        document.write(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

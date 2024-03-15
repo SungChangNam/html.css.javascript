@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+            padding: 5px;
+        }
+        label >span{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            padding: 10px;
+
+
+        }
+        input[type=text]{
+            color: blue;
+        }
+        input:hover,textarea:hover{
+            background: aliceblue;
+
+        }
+        input[type=text]:focus,input[type=email]:focus{
+            font-size: 200px;
+            
+
+
+        }
+    </style>
+</head>
+<body>
+    <h3>자기소개</h3>
+    <form action="">
+        <label for=""><span>Name</span> <input type="text" placeholder="hong"></label>
+        <label for=""><span>Email</span> <input type="email" placeholder="test@google.com"></label>
+        <label for=""><span>pro</span> <textarea name="" id="" cols="30" rows="10" placeholder="Write on your profile"></textarea></label>
+        <label for=""><span></span> <input type="submit" placeholder="submit"></label>
+    </form>
+</body>
+</html>

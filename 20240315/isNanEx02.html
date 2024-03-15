@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumInt(x,y){
+            var isStrX=!isNaN(x);
+            var isStrY=!isNaN(y);
+
+            //둘중 하나라도 숫자가 아니면 실행을 중단한다.
+            if(!isStrX  || !isStrY ){
+                return "숫자가 와야 한다."
+            }
+            var result =parseInt(x) + parseInt(y);
+            return result;
+            
+        }
+        a=sumInt("a" ,1)
+        a1=sumInt(1 ,1)
+        document.write(a +"<br>")
+        document.write(a1 +"<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

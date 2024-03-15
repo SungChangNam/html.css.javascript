@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //세과목을 점수로 입력받아 총점과 평균을 구한후
+        //평균을 활용하여 학점 판정하는 프로그램을 구현하시오.
+
+        var kor = parseInt(prompt("국어 점수:"," "))
+        var eng = parseInt(prompt("영어 점수:"," "))
+        var mat = parseInt(prompt("수학 점수:"," "))
+
+        var sum = kor +eng +mat;
+        var avg = sum/3;
+
+        document.write("총점:" +sum+ "<br>");
+        document.write("평균:" +avg+ "<br>");
+        
+        document.write("학점:" +grade+ "<br>");
+        var grade="";
+
+
+        /*switch~case:*/
+        switch(parseInt(avg)/10){
+            case 10:
+            
+            case 9:
+                grade= "a";
+                document.write("학점:" +grade+ "<br>");
+                break;
+            case 8:
+                grade= "b";
+                document.write("학점:" +grade+ "<br>")
+                break;
+            case 7:
+                grade= "c";
+                document.write("학점:" +grade+ "<br>")
+                break;
+            case 6:
+                grade= "d";
+                document.write("학점:" +grade+ "<br>")
+                break;
+            default: 
+            grade="F"
+            break;
+
+            
+        
+        }
+
+
+
+        /*   
+        if(avg >90 && avg <=100){
+            grade = "A";
+        }else if(avg >80 && avg <=90){
+            grade = "B";
+
+        }else if(avg >70 && avg <=80){
+            grade = "C";
+
+        }else if(avg >60 && avg <=70){
+            grade = "D";
+
+        }else{
+            grade="F";
+        }   
+        */
+
+
+        var avg = "<h1>"+grade+"학점입니다 </h1>"
+        document.write(avg);
+
+
+        
+    </script>
+</body>
+</html>
