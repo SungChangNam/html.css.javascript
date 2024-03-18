@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+    <style>
+    span{
+        visibility:hidden;
+    }
+    
+</style>
+
+<script>
+    function showAnswer(){
+            
+        var spanArray =  document.getElementsByTagName("span");
+        
+        
+        for(var i = 0; i < spanArray.length; i++){
+            spanArray[i].style.visibility="visible"
+        }
+        
+                
+    }
+
+    function hideAnswer(){
+        
+        var spanArray =  document.getElementsByTagName("span");
+        
+        for(var i = 0; i < spanArray.length; i++){
+            spanArray[i].style.visibility="hidden"
+        }        
+    }
+</script>
+</head>
+<body>
+    <h3>다음 빈 곳에 숨은 코드는?</h3>
+    <hr>
+    <ul>
+        <li>#(<span>include</span>      )&lt;stdio.h>{</li>
+        <li> (<span>int </span>) main()</li> 
+        <li>printf("나는<span> 코딩</span>을 사랑합니다.")</li>
+        <li><span>return 0;</span></li>
+        <li>}</li>
+    </ul>
+    <input type="button" value="보이기" onclick="showAnswer()">
+    <input type="button" value="숨기기" onclick="hideAnswer()">
+
+</body>
+</html>
