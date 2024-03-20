@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //화면 중심 좌표를 가로/세로 형태로 리턴함
+        function getCenter(){
+            var centerX = new Array(
+                parseInt(screen.availWidth/2),parseInt(screen.availHeight/2)
+            );
+            return centerX;
+            
+        };
+            
+            
+        
+
+        var ScreenCenter = getCenter();
+        document.write("<h1>모니터 화면의 중심 좌표: x ="+ScreenCenter[0]
+            +"px, y="+ScreenCenter[1] +"px </h1>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        2차원 배열
+            - 1차원 배열은 각 칸에 새로운 배열을 넣는다.
+                1차원은 각 칸이 행이되고, 각각의 칸에 추가됨
+                개별벅인 배열에 열을 의미함
+                
+                var arr = new Array(
+                    new Array("값1","값2","값2"),
+                    new Array("값1","값2","값2"),
+                    new Array("값1","값2","값2")
+                );
+
+
+                var arr = [
+                ["값1","값2","값3"],
+                ["값1","값2","값3"],
+                ["값1","값2","값3"]
+                ];
+        */
+
+
+        var myArray  = [
+            ["가길동","자바스크립트","HTML"],
+            ["나길동","모바일","ios"]
+        ]; //배열 선언과 동시에 (초기화)값 저장;
+        // myArray.length는 2차원 배열에 행을 의미함
+        
+        for (var i = 0; i <myArray.length; i++) { //행
+            //
+            for(var j = 0; j <myArray[i].length; j++)
+            {
+                document.write("<p>"+myArray[i][j] + "</p>");
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

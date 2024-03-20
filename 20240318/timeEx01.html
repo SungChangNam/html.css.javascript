@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function printTime() {
+            var days = ["일","월","화","수","목","금","토"]
+            var mydate = new Date();
+            
+    
+
+            var yy = mydate.getFullYear();
+            var mm = mydate.getMonth()-1;
+            var dd = mydate.getDate();
+            var i =  mydate.getDay();
+
+            var day = days[i];
+            var hh = mydate.getHours();
+            var mi = mydate.getMinutes()
+            var ss= mydate.getSeconds();
+            //현재 시각 완성
+            
+
+            result = yy+"-"+mm+"-"+dd+"-"+ " " + day +"요일 " +hh+"-"+mi+"-"+ss;
+            console.log(3)
+            document.getElementById("timer").innerHTML =result
+            
+
+        }
+
+        function startTime() {
+
+            // printTimer 를 1초에 한번직 반복해서 자동으로 호출해라.
+            setInterval(printTime(),100);
+            
+        }
+
+    
+    
+        
+    </script>
+</head >
+<body onload="startTime()">
+    <h1 id="timer" > </h1>
+</body>
+</html>

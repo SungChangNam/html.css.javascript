@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        #container{
+            width: auto;
+            border: 5px solid #ff00ff;
+            padding: 10px;
+        }
+
+        #container >#title{
+            background-color: #d5d5d5;
+            padding: 10px;
+        }
+        .box {
+            padding: 10px;
+            background-color: #ffff00;
+            font: 20px '굴림';
+        }
+        #container >ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0px;
+            width: auto;
+            border: 5px solid #00ff00;
+        }
+
+        #container > ul > li:first-child ,#container >ul >:last-child{
+            border: 3px dotted red;
+            padding: 3px 10px;
+
+        }
+
+        pre {
+            font: 14px /130% 'Courier New';
+            background: #eee;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border: 1px solid #555;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        $(function(){
+            // 사용자 코드 블럭
+            // id 값에 의한 접근, 가장 일반적인 방법    
+            $("#title").html("Second Title");
+
+
+            // 자식 선택자를 사용해서 처리하는 방법
+            $("#container > #title").html("This is Title");
+            
+            
+            // 자손
+            $("#container .box").html("Hello!!");
+
+
+            $("ul > li").html("목록입니다.");
+
+            // 두번째 li 태그에 지정방법 : eq(n)란 가상 클래스이며, n은 0부터 시작한다.
+            $("ul > li:eq(1)").html("jQuery 고유의 방식 입니다.");
+            
+            // 복수 요소를 지정하는 방법
+
+            $("p,pre").html("다중요소 선택");
+
+            // name 속정이 source 인 값만 지정
+            $("pre[name= 'source']").html("CSS의 선택자");
+
+            $("ul> li:first-child").html("First-child");
+            $("li:last-child").html("Last-child");
+
+
+
+        });
+
+
+    
+    </script>
+</head>
+<body>
+    
+    <div id="container">
+        <h1 id="title"></h1>
+        <div class="box"></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <p></p>
+    <pre></pre>
+    <pre name="source"></pre>
+
+</body>
+
+</html>

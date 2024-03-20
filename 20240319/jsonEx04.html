@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        // 게시판 데이터 표현
+        var bbs = {
+            "title" :"HTML5 + CSS3 + JavaScript 강의 자료실",
+            "description" :"본 게시판은 글로벌인 에서 진행중인 IT 1기 수강생 들을 위한 자료실 입니다.각 게시판에 다운로드 권한은 매 강의시 마다 부여됩니다.",
+            "total" : 4,
+            "item" : [
+                {"no": "공지사항","subject":"HTML5 + CSS3 + JavaScript 강의 자료실","hit":3,"data" : "2024.03.07" },
+                {"no":3,"subject":"HTML5 + CSS3 + JavaScript 3일차 강의 자료실","hit":6,"data" : "2024.03.18"},
+                {"no":2,"subject":"HTML5 + CSS3 + JavaScript 2일차 강의 자료실","hit":10,"data" : "2024.03.17"},
+                {"no":1,"subject":"HTML5 + CSS3 + JavaScript 1일차 강의 자료실","hit":10,"data" : "2024.03.16"}
+            ]
+
+        };
+        // bbs 안의 각 독립된 값들에 대한 출력 html 생성
+        var html =" <h1>"+ bbs.title+"</h1>";
+        html += "<p>" +bbs.description+ "</p>";
+        html += "<p> 총 게시물 수" +bbs.total+ "</p>";
+        html += "<ul>";
+            // 배열로 표현되는 게시물 정보에 대한 출력 html 생성
+            for(var i =0 ; i <bbs.item.length; i ++){
+                var item = bbs.item[i];
+                html += "<li>("+item.no+") "+item.subject+"(조회수:"+item.hit+"/날짜:"+item.data+")</li>";
+            
+            }
+        
+        html += "</ul>";
+            
+        document.write(html);
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

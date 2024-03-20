@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        
+    var url ="http://www.naver.com/index.html"
+    document.write("<h1><p>문자열 " + url + "</p></h1>");
+
+    var len = url.length;
+    document.write("<h1><p>문자열 길이: " + len + "</p></h1>");
+
+    // 파라미터로 설정된 위치의 글자를 알고자 할떄
+    var str2nd =url.charAt(2);
+    document.write("<h1><p>2번째 문자: " + str2nd + "</p></h1>");
+    
+    // 파라미터으로 전달된 글자가 처음 나타나는 위치를 알려고 할때
+    var position1 =url.indexOf("/");
+    document.write("<h1><p>1번째 위치 문자: " + position1 + "</p></h1>");
+    
+    //두번째 파라미터 값은 첫번쨰 파라미터의 글자를 찾기 위한 위치
+    var position2 =url.indexOf("/",position1+1);
+    document.write("<h1><p>2번째 위치  문자: " + position2 + "</p></h1>");
+    
+    //파라미터로 전달된 문자가 마지막으로 위치한 값을 리턴한다.
+    //문자를 끝에서부터 세는 것이 아니고 문자열에 처음부터 위치를 시작한다.
+    var position3 =url.lastIndexOf("/");
+    document.write("<h1><p>3번째  위치 문자: " + position3 + "</p></h1>");
+
+    // 부문 문자열를 추출할떄 시작위치와 끝 위치를 파라미터로 설정
+    var substring1 =url.substring(0,5);
+    document.write("<h1><p>1번째 부분 문자열: " + substring1 + "</p></h1>");
+
+    var substring2 =url.substring(7);
+    document.write("<h1><p>2번째 부분 문자열: " + substring2 + "</p></h1>");
+
+    
+    var up =url.toUpperCase();
+    document.write("<h1><p>모든 문자를 대문자로 변환: " + up + "</p></h1>");
+
+    var low =url.toLowerCase();
+    document.write("<h1><p>모든 문자를 소문로 변환: " + low + "</p></h1>");
+
+    
+    // 도메인 추출
+    var p1 =url.indexOf("://");
+    var p2 =url.indexOf("/",p1+3);
+    var domain = url.substring(p1+3,p2);
+    document.write("<h1><p>도메인: " + domain + "</p></h1>");
+    
+    // 파일명 추출
+    var p3 =url.lastIndexOf("/");
+    var p4 =url.lastIndexOf(".");
+    var filename = url.substring(p3+1,p4);
+    document.write("<h1><p>파일명: " + filename + "</p></h1>");
+
+    // 확장자 추출
+    var p5 =url.lastIndexOf(".");filename
+    var extension = url.substring(p5+1);
+    document.write("<h1><p>확장자: " + extension + "</p></h1>");
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
