@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <script>
+        
+        function sayHello(){
+            alert("Hello")
+        }
+
+        /*
+        function initPage() {
+            var h1= document.getElementById("hello");
+            h1.style.color = "#0000ff"
+            h1.style.backgroundColor = "#d5d5d5"
+            h1.style.fontSize = "50px";
+            h1.style.padding = "15px";
+            h1.style.margin ="0";
+            h1.innerHTML = "Hello jQuery"
+        }
+        */
+        //javascript 의 onLoad 이벤트와 같은 효과다
+        
+        /*
+        initPage 에게는  "$"라는 객체(혹은함수)가 파라미터로 전달되는데,
+        "$"는 ->jquery 의 모든 기능을 저장하고 있는 jquery 최상위 객체
+
+
+
+        */
+
+
+
+        function initPage($){
+            var h1= $("#hello");
+            //var h1= document.getElementById("hello");
+            h1.html("Hello JQuery");
+            //h1.innerHTML = "Hello jQuery"
+
+        }
+    
+            $("#btn1").click(function(){
+                $("#myBox").slideUp("slow");
+            })
+        
+
+    
+        jQuery(sayHello);
+        
+        jQuery(initPage);
+
+        
+    </script>
+</head>
+<body>
+    <h1 id="hello">
+
+    </h1>
+    <p id="myBoox"></p>
+    <input type="button" id="btn1" value="jQuery" >
+    
+</body>
+</html>

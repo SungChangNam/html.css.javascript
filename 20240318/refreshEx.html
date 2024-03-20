@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function random(n1, n2) {
+            return parseInt(Math.random() * (n2 - n1 + 1)) + 1;
+            
+        };
+        /* 5자리 인증번호를 id 값이  "auth" 인 요소를 출력*/
+        
+        function authNo() {
+            var value= "";
+            for (var i=0; i<5; i++) {
+                value += random(0,45);
+                
+            }
+
+            document.getElementById("auth").innerHTML = value;
+        }
+        // 페이지 새로 고침
+        function refresh() {
+            location.reload();
+        }
+    </script>
+</head>
+<body onload="authNo()">
+    <p>
+        인증번호는 <strong id="auth">00000</strong> 입니다
+    </p>
+
+    <!-- 페이지가 새로 고침할때마다 이벤트 호출  -->
+    <input type="button" value="인증번호 새로받기" onclick="refresh()">
+
+    
+</body>
+</html>

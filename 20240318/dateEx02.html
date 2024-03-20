@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 날짜 객체 생성
+
+        var theDay = new Date(1990,4,21);
+        var toDay =new Date();
+
+
+
+        
+        var cnt = toDay.getTime() - theDay.getTime();
+        document.write(cnt+"<br>")
+        
+        var day= Math.floor(cnt/(24*60*60*1000));
+        document.write("<h1>내가 태어난 일 부터 오늘까지 "+day +"일 이지났습니다.");
+
+        
+
+
+
+
+
+
+        
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

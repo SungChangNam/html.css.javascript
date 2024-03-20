@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("<p> 문서의 url 주소: " +location.href+"</p>");
+        document.write("<p> 호스트 이름과 포트: " +location.host+"</p>");
+        document.write("<p> 호스트 컴퓨터 이름: " +location.name+"</p>");
+        document.write("<p> 앵커 이름: " +location.hash+"</p>");
+        document.write("<p> 디렉토리 이하 경로: " +location.pathname+"</p>");
+        document.write("<p> 포트 번호: " +location.port+"</p>");
+        document.write("<p> 프로토콜: " +location.protocol+"</p>");
+        document.write("<p> url 조회부분: " +location.search+"</p>");
+
+        function goGoogle(){
+            if(confirm("정말로 나를 배신하고 크롬으로 이동하시겠습니까?",  ));
+                location.href = "https://www.google.com";
+        }
+    </script>
+</head>
+<body>
+    <a href="locationEx.html?a=1&b=2#top">링크 재 실행</a>
+    <input type="button" value="구글로이동" onclick="goGoogle()">
+
+    
+</body>
+</html>

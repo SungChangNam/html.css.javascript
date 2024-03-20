@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //하위 데이터 요소로서 json 을 포함하고 있는 json 데이터
+
+        var keyword_rank ={
+            "r1" :{"k": "HTML5", "s": "+","v":178},
+            "r2" :{"k": "CSS3",  "s": "New","v":158},
+            "r3" :{"k": "JQuery", "s": "+","v":135}
+        }
+
+        // json 데이터의 내용을 목록 정의 태그로 구성함
+        var tag ="<h1>인기 검색어 순위 </h1><ul>";
+            tag += "<li>"+keyword_rank.r1.k+"("+keyword_rank.r1.s+ keyword_rank.r1.v+")</li>"
+            tag += "<li>"+keyword_rank.r2.k+"("+keyword_rank.r2.s+ keyword_rank.r2.v+")</li>"
+            tag += "<li>"+keyword_rank.r3.k+"("+keyword_rank.r3.s+ keyword_rank.r3.v+")</li>"
+            
+
+        tag += "</ul>";
+        
+        document.write(tag)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

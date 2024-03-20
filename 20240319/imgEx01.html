@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumbnail {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 150px;
+            float: left;
+        }
+
+        /*목록의 각 항목에대한 크기및 여백설정*/
+        .thumbnail li{
+            width: 130px;
+            height: 100px;
+            padding: 5px 10px;
+
+        }
+
+        /* 썸네일 이미지 크기설정*/
+        .thumbnail img{
+            width: 130px;
+            height: 100px;
+        
+        }
+
+
+        
+        .view {
+            float: left;
+            width: 50px;
+            height: 320px;
+            padding: 5px 0 ;
+
+        }
+        /* 큰 이미지 영역의 배치와 크기, 여백설정*/
+        .view img {
+        
+            width: 500px;
+            height: 320px;
+        
+
+        }
+    </style>
+    <script>
+        // 링크에 의해서 호출될 함수
+        function setImg(index) {
+            // 이미지 경로를 포함한 배열
+            var image_list = [
+            'img/spring1.jpg',
+            'img/spring2.jpg',
+            'img/spring3.jpg'
+            ];
+            
+            
+            //이미지를 객체화
+            var image =document.getElementById("target");
+            
+            
+            
+            // 이미지 객체의 src 속성에 배열의 값들 중에소 파라미터로 전달된 위치 값을 설정함
+            
+            image.src = image_list[index];
+            
+
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 각 이미지를 포함하는 링크를 클릭했을 때 setImage method 호출해서 이미지 변경-->
+
+    <ul class="thumbnail">
+        <li><a href="#" onclick="setImg(0); return false;"><img src="img/spring1.jpg" alt=""></a></li>
+        <li><a href="#" onclick="setImg(1); return false;"><img src="img/spring2.jpg" alt=""></a></li>
+        <li><a href="#" onclick="setImg(2); return false;"><img src="img/spring3.jpg" alt=""></a></li>
+    </ul>
+
+    <div class="view">
+        <img src="img/spring1.jpg" id="target">
+    </div>
+</body>
+
+</html>

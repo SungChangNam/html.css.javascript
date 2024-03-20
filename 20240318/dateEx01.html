@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 오늘 날짜출력 함수
+        var myDate = new Date()
+
+        //1995년 3월 31일 12시:16:30 똘이장군이 태어남
+        myDate.setFullYear(1995);
+        myDate.setMonth(2);
+        myDate.setDate(7);
+        myDate.setHours(9);
+        myDate.setMinutes(30);
+        myDate.setSeconds(1);
+
+        var yy= myDate.getFullYear();
+        var mm= myDate.getMonth()+1;
+        var dd= myDate.getDate();
+
+
+        
+        
+
+        //현재 요일을 출력
+        // 요일의 이름을 저장하는 배열 생성
+
+        var days= ['sun;Mon;Tue;Wed;Thu;Fri;Sat'];
+        var i = myDate.getDay(); // data 객체에 저장된 요일의 인덱스를 리턴받은
+        // 0  -> Sun,~~~~~~6->Sat
+        var day =days[i];
+        result = yy+"-"+mm+"-"+dd+"-"+day+"-"
+        
+    
+        
+
+        //시간
+        //현재 시간 출력
+
+        var hh = myDate.getHours();
+        var mi = myDate.getMinutes();
+        var ss= myDate.getSeconds();
+
+        var result = yy+"-" +mm+"- "+dd+"- "+day+"-"+hh+"- "+mi+"- "+ss    
+        document.write("<h1>"+result+"</h1>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

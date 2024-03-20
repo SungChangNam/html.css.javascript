@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function open1 (){
+            //새창 띄우기
+            window.open("openEx.html");
+
+        }
+        function open2 (){
+            //새창 띄우기
+            window.open("openEX.html","","width=300,height=500, scrollbars=no,toolbar=no,menubar=no,status=no,location=no");
+            console.log("test") 
+        }
+        
+        function open3 (url) {
+            //새창 띄우기
+            window.open(url,"mywin","width=300,height=500, scrollbars=no,toolbar=no,menubar=no,status=no,location=no");
+            
+        }
+        
+    
+        
+    </script>
+
+</head>
+<body>
+    <h1>window 객체</h1>
+    <h3>open 메소드</h3>
+    <div>
+        <a href="#" onclick="open1();return false">새창 열기</a><br>
+        <a href="#"  onclick="open2();return false">팝업창 열기(1)</a><br>
+        <a href="#"  onclick="open3('http://www.naver.com');return false">팝업창 열기(2-1)</a><br>
+        <a href="#"  onclick="open3('http://www.daum.net');return false">팝업창 열기(2-2)</a><br>
+    
+
+    </div>
+    
+</body>
+</html>

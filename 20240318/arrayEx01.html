@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        배열 : 하나의 값 안에 여러개의 변수를 그룹화 하는 단위를 의미함
+                배열이 생성되면 그안의 값들은 인덱스(첨자) 0부터 순서대로
+                번호를 부여함
+        */
+
+        // 배열생성 1
+        // 배열생성과 동시에 값을 저장
+        var myArr =new Array("홍길동","활빈당","보스");
+        var myArr2= [];
+        var myArr3= [];
+        var myArr4= [];
+        // 배열생성 2
+
+        var myArr1 =["홍길동","활빈당","보스"];
+
+        document.write("<h1>"+myArr[0]+"</h1>");
+        document.write("<h1>"+myArr[1]+"</h1>");
+        document.write("<h1>"+myArr[2]+"</h1>");
+        
+        // 배열 생성후 값을 저장한다.
+        myArr2[0]= "강감찬"
+        myArr2[1]= "귀주대첩"
+        myArr2[2]= "고려의장군"
+
+        
+        var myArr1 =["홍길동","활빈당","보스"];
+
+        document.write("<h1>"+myArr2[0]+"</h1>");
+        document.write("<h1>"+myArr2[1]+"</h1>");
+        document.write("<h1>"+myArr2[2]+"</h1>");
+
+        myArr3[0]= "이순신"
+        myArr3[1]= "명량대첩"
+        myArr3[2]= "조선의장군"
+
+        //배열에 값 저장
+        for (var i=0; i <myArr3.length; i++) {
+            myArr3[i] = prompt(i+1+ "정보를 입력하세요 :","")
+            
+        }
+
+        // 배열에 저정된 값 출력
+        for (var i=0; i <myArr3.length; i++) {
+
+            document.write("<h1>"+myArr3[i]+"</h1>");
+        }
+            
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

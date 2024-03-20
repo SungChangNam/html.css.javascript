@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/event.css">
+    <script>
+
+        $(function(){
+
+        /*            
+            // 마우스 버튼을 눌름
+            $("#input").mousedown(function(){
+                $("#result").html("Mouse Down Event !");
+            });
+        
+            // 마우스를 눌렀다  띈 상태
+            $("#input").mouseup(function(){
+                $("#result").html("Mouse up Event !");
+            });
+        
+            // 마우스 커서올라간 상태
+            $("#input").mouseenter(function(){
+                $("#result").html("Mouse Enter Event !");
+            });
+        
+            //마우스 커서가 내려간 상태
+            $("#input").mouseleave(function(){
+                $("#result").html("Mouse leave Event !");
+            });
+            */
+            $("#input").click(function(){
+                $("#result").html("Mouse click Event !");
+            });
+
+            $("#input").dblclick(function(){
+                $("#result").html("Mouse Double click Event !");
+
+            });
+
+            $("#input").hover(function(){
+                $("#result").html("Mouse Enter Event !");
+            },function(){
+
+                $("#result").html("Mouse leave Event !");
+            });
+            
+
+        });
+    </script>
+</head>
+<body>
+    
+    <h1>mouse event</h1>
+    <div id="input">
+        click here!
+
+    </div>
+    <h2>Result</h2>
+    <div id="result"></div><!DOCTYPE html>
+
+
+</html>

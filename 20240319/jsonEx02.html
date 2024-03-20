@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul > li {
+            list-style: none;
+
+        }document.getElementById("biz").innerHTML = biz_list;
+
+    </style>
+    <script>
+        function initCompany(){
+            // 회사 정보를 표현하는 데이터 구조를  json으로 정의함
+            // 하나의 json 데이터 안에 일반 변수와 배열 데이터가 공존할 수 있음
+            var company ={
+                "name": "Apple",
+                "since": 1976,
+                "department" : ["영업","디자인","개발팀","판매"],
+                "biz" : ["소프트웨어 개발","통신 판매업","위치정보서비스","금융"]
+            
+
+            };
+
+            // 회사 이름 출력
+            document.getElementById("name").innerHTML = company.name;
+
+            // 설립 연도
+            document.getElementById("since").innerHTML = company.since;
+
+            // 주요부서(배열 -> 반복문)
+            var dept_list ="";
+            
+            for(var i =0; i <company.department.length; i++){
+                dept_list+= "<li>"+company.department[i]+"</li>"                
+                
+            }
+            
+            document.getElementById("department").innerHTML = dept_list;
+            // 주요 사업 분야
+            var biz_list= "";
+            for(var i =0; i <company.biz.length; i++){
+                biz_list+= "<li>"+company.biz[i]+"</li>"                
+
+            }
+            document.getElementById("biz").innerHTML = biz_list;
+            
+
+        }
+        
+
+
+    </script>
+</head>
+<body onload="initCompany()">
+    
+    <h1 id="name"></h1>
+    <p><strong>설립연도:</strong><samp id="since"></samp>
+    </p>
+    <h2>주요부서</h2>
+    <ul id="department"></ul>
+
+    <h2>주요 사업 분야</h2>
+    <ul id="biz"></ul>
+
+        
+
+    </ul>
+</body>
+</html>
