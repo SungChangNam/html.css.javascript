@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/log.css">
+
+    <script>
+        $(function () {
+            // 입력란에 포커스가 들어왔을 때 active 클래스 추가
+            $("#user_name, #user_password").focus(function () {
+                $(this).addClass("active");
+            });
+
+            // 입력란에서 포커스가 나갔을 때 active 클래스 제거
+            $("#user_name, #user_password").blur(function () {
+                $(this).removeClass("active");
+            });
+
+            // 폼 submit 이벤트 처리
+            $("#login").submit(function (e) {
+                // 아이디 검사
+                if (!$("#user_name").val()) {
+                    alert("아이디를 입력하세요");
+                    $("#user_name").focus();
+                    return false;
+                }
+
+                // 비밀번호 검사
+                if (!$("#user_password").val()) {
+                    alert("비밀번호를 입력하세요");
+                    $("#user_password").focus();
+                    return false;
+                }
+
+                // 로그인 로딩 표시
+                $("#login .loader").show();
+
+
+                // 3초 후 로그인 로딩 표시 숨기기
+                setTimeout(function () {
+                    alert("안녕하세요, " + $("#user_name").val() + "님!");
+                    $("#login .loader").hide();
+                }, 3000);
+
+                // 모든 검사 통과 시 폼 submit
+                return false;
+            });
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <form action="" id="login">
+        <fieldset>
+            <legend> login</legend>
+            <div>
+                <label for="user_name">id</label>
+                <input type="text" name="user_name" id="user_name">
+            </div>
+
+            <div>
+                <label for="user_password">password</label>
+                <input type="text" name="user_password" id="user_password">
+            </div>
+
+            <div>
+                <input type="submit" value="login" id="">
+            </div>
+            <div class="loader"><img src="img/loader.gif"></div>
+
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>

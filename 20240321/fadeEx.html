@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            
+            $("#fade > input:eq(0)").click(function(){
+                $("#fade > div").fadeIn(2000);
+            });
+
+            $("#fade > input:eq(1)").click(function(){
+                $("#fade > div").fadeOut(2000);
+            });
+
+
+            $("#fade > input:eq(2)").click(function(){
+                $("#fade > div").fadeToggle(2000);
+            });
+        });
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>fadeIn/fadeOut</h1>
+    <div id="fade">
+        <input type="button" value="보이기" id="">
+        <input type="button" value="숨기기" id="">
+        <input type="button" value="토글" id="">
+
+        <div>
+            <img src="../20240321/img/spring2.jpg" width="300px" height="300px">
+
+        </div>
+
+
+    </div>
+</body>
+</html>

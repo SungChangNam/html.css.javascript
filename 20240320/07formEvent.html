@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="../css/event.css" />
+    <script>
+      $(function () {
+        //id속성join인 폼태그 안의 submit버튼 누른경우
+        $("#join").submit(function () {
+          var user_id = $("input[name='user_id']").val();
+
+          // 아이디입력검사
+          if (!user_id) {
+            alert("Please fill your id");
+            $("input[name='user_id']").focus(); // 이렇게 이벤트식으로와야함, user_id.focus();는 이벤트에는 안됨
+            return false;
+          }
+
+          //비번입력검사
+          if (!$("input[name='user_pw']").val()) {
+            alert("Please fill your pw");
+            $("input[name='user_pw']").focus();
+            return false;
+          }
+
+          //주민번호입력검사
+          if (!$("input[name='juminno']").val()) {
+            alert("Please fill your id number");
+            $("input[name='juminno']").focus();
+            return false;
+          }
+
+          //라디오버튼 선택여부검사
+          //!$().is(":checked") --> false
+          if (!$("input[name='sex']").is(":checked")) {
+            alert("Please fill out your sex");
+            $("input[name='sex']:eq(0)").focus();
+            return false;
+          }
+
+          //이메일입력검사
+          if (!$("input[name='email']").val()) {
+            alert("Please fill your id email");
+            $("input[name='email']").focus();
+            return false;
+          }
+
+          //url입력검사
+          if (!$("input[name='url']").val()) {
+            alert("Please fill your id url");
+            $("input[name='url']").focus();
+            return false;
+          }
+
+          //폰번호입력검사
+          if (!$("input[name='hpno']").val()) {
+            alert("Please fill your id tel.");
+            $("input[name='hpno']").focus();
+            return false;
+          }
+
+          //취미 선택여부검사
+          if (!$("input[name='hobby']").is(":checked")) {
+            alert("select hobby");
+            $("input[name='hobby']:eq(0)").focus();
+            return false;
+          }
+
+          //select 선택여부검사
+          if ($("select[name='job'] > option:selected").index() < 1) {
+            alert("select job");
+            $("select[name='job']").focus();
+            return false;
+          }
+
+          //입력한내용을 화면(브라우저)에 출력
+          //   var user_id = $("input[name='user_id']").val();
+          var user_pw = $("input[name='user_pw']").val();
+          var juminno = $("input[name='juminno']").val();
+          var sex = $("input[name='sex']:checked").val();
+          var email = $("input[name='email']").val();
+          var url = $("input[name='url']").val();
+          var hpno = $("input[name='hpno']").val();
+          var job = $("select[name='job'] > option:selected").val();
+          //체크박스의 선택항목 값들을 추출해야함
+          var hobby = $("input[name='hobby']:checked");
+          //추출된값누적해 저장할 변수선언
+          var select_hobby = "";
+          //hobby의 객체수만큼 반복처리함
+          hobby.each(function () {
+            //각 반복되는 처리안에서 $(this)는 hobby안에 포함된 개체를 의미
+            // 체크된 n번째 체크박스를 의미함
+            //추출된값을 누적처리함
+            select_hobby += $(this).val() + ",";
+          });
+
+          //출력할 문자열 구성함
+          var result = "<ul>";
+          result += "<li> id : " + user_id + "</li>";
+          result += "<li> pw : " + user_pw + "</li>";
+          result += "<li> id number : " + juminno + "</li>";
+          result += "<li> sex : " + sex + "</li>";
+          result += "<li> email : " + email + "</li>";
+          result += "<li> url : " + url + "</li>";
+          result += "<li> tel : " + hpno + "</li>";
+          result += "<li> hobby : " + select_hobby + "</li>";
+          result += "<li> job : " + job + "</li>";
+
+          result += "</ul>";
+
+          $("body").html(result);
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>sign up</h1>
+    <form name="form1" id="join">
+      <div id="input">
+        <h3>id</h3>
+        <input type="text" name="user_id" />
+
+        <h3>password</h3>
+        <input type="password" name="user_pw" />
+
+        <h3>id number</h3>
+        <input type="password" name="juminno" />
+
+        <h3>sex</h3>
+        <label for=""><input type="radio" name="sex" value="M" />man</label>
+        <label for=""><input type="radio" name="sex" value="F" />woman</label>
+
+        <h3>e-mail</h3>
+        <input type="email" name="email" />
+
+        <h3>URL</h3>
+        <input type="url" name="url" />
+
+        <h3>Tel.</h3>
+        <input type="tel" name="hpno" />
+
+        <!-- check box -->
+        <h3>hobby</h3>
+        <label for=""><input type="checkbox" value="soccer" name="hobby" />soccer</label>
+        <label for=""><input type="checkbox" value="baseball" name="hobby" />baseball</label>
+        <label for=""><input type="checkbox" value="basketball" name="hobby" />basketball</label>
+
+        <!-- drop down -->
+        <h3>job</h3>
+        <select name="job">
+          <option>-----select------</option>
+          <option value="programmer">programmer</option>
+          <option value="designer">designer</option>
+          <option value="engineer">engineer</option>
+          <option value="student">student</option>
+        </select>
+
+        <input type="submit" value="save" class="myButton" />
+        <input type="reset" value="reset" class="myButton" />
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        body {
+            background: #252522;
+          }
+      
+          ul {
+            padding: 0;
+            margin: 50px auto;
+            list-style: none;
+            width: 800px;
+          }
+      
+          .title {
+            padding: 0;
+            margin: 0;
+          }
+      
+          .title > a {
+            display: block;
+            padding-top: 12px;
+            font-size: 14px;
+            text-indent: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            height: 23px;
+            background: url("/20240321/img/background.jpg");
+          }
+      
+          .selected {
+            background: url("/20240321/img/background-selected.jpg");
+          }
+      
+          .content {
+            margin: 0;
+            background: #d4d0c8;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+          }
+    </style>
+    <script>
+        $(function(){
+            //첫번쨰 항목이 펼쳐져 있도록 처리함
+            // 탭의 내영은 첫번쨰 항목안의 <a> 태그가 가르키는 txt 파일을 읽어와서 출력
+            $(".collapsible:eq(0) > .content").load($(".collapsible:eq(0) .title a")).attr("href");
+            
+            //첫번째 항복의 <a>태그에게  selected 클래스를 적용시킴
+            $(".collapsible:eq(0) a").addClass("selected");
+            
+             //첫번째 항목 이외의 나머지 항목들 안에 있는 내영(content)을 숨긴다.
+            $(".collapsible").not(":eq(0)").find(".content").hide();
+                
+            //링크에 대한 클릭 이벤트 처리를 하면됨
+
+            $(".collapsible.title a").click(function(){
+
+            })
+
+
+    
+
+        });
+    </script>
+</head>
+
+
+<body>
+    <ul>
+        <li class="collapsible">
+            <h2 class="title"><a href="txt/html5.txt">HTML5</a></h2>
+            <p class="content"></p>
+        </li>
+        
+        <li class="collapsible">
+            <h2 class="title"><a href="txt/jquery.txt">Jquery</a></h2>
+            <p class="content"></p>
+        </li>
+
+
+        <li class="collapsible">
+            <h2 class="title"><a href="txt/bootstrap.txt">Bootstrap3</a></h2>
+            <p class="content"></p>
+        </li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $(function(){
+            
+            $("#sh > input:eq(0)").click(function(){
+                $("#sh > div").show(1500);
+            });
+
+            $("#sh > input:eq(1)").click(function(){
+                $("#sh > div").hide(2000);
+            });
+
+
+            $("#sh > input:eq(2)").click(function(){
+                $("#sh > div").toggle(2000);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>보이기/숨기기</h1>
+    <div id="sh">
+        <input type="button" value="보이기" id="">
+        <input type="button" value="숨기기" id="">
+        <input type="button" value="토글" id="">
+
+        <div>
+            <img src="../20240321/img/spring1.jpg" width="300px" height="300px">
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
